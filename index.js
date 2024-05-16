@@ -5,6 +5,10 @@ const app = express()
 const port = process.env.PORT
 dotenv.config()
 
+app.get('/', (req, res) => {
+	res.send('Velkommen til min sangbog')
+})
+
 app.use(SongController)
 
 app.listen(port, () => {
